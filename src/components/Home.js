@@ -1,8 +1,8 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 function Home({ isLoggedIn }) {
-  if (!isLoggedIn) return <Navigate to="/login" />;
+  if (!isLoggedIn) return <Redirect to="/login" />;
 
   return (
     <div>
@@ -12,3 +12,4 @@ function Home({ isLoggedIn }) {
 }
 
 export default Home;
+//checked

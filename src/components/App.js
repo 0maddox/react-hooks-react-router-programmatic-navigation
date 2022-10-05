@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route,  Routes } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Login from "./Login";
@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <Navbar setIsLoggedIn={setIsLoggedIn} />
-      {/* <Switch>
+      <Switch>
         <Route exact path="/about">
           <About />
         </Route>
@@ -21,14 +21,10 @@ function App() {
         <Route exact path="/">
           <Home isLoggedIn={isLoggedIn} />
         </Route>
-      </Switch> */}
-          <Routes>
-        <Route exact path="/about" element={<About/>} />
-        <Route exact path="/login" element = {<Login setIsLoggedIn={setIsLoggedIn}/>} />
-        <Route exact path="/" element ={<Home isLoggedIn={isLoggedIn}/>} />
-      </Routes>
+      </Switch>
     </div>
   );
 }
 
 export default App;
+//checked
